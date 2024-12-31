@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="Styles/style.css">
+    <title>Ethan's Website</title>
+  </head>
+    <body>
+      <h1><strong>WELCOME TO MY WEBSITE</strong></h1>
+      <p> Hi there! I'm Ethan and this my first website!</p>
+      <p>This website is mainly for practice and for my classes so please do not expect many updates.</p>
+      
+      <p>As I am currently still busy with school it is very difficult to actually practice coding but I am very eager to master coding.</p>
+      <h3><strong>Index:</strong></h3>
+      <ul>
+        <li><a href="Extra Links/JavaScript Assignments/java_script.html" target="_self">JavaScript Assignments</a></li>
+        <li><a href="Extra Links/Web Design Assignments/web_design.html">Web Design Assignments</a></li>
+        <li><a href="my_projects.html" target="_self">My Projects</a></li>
+        <li><a href="update_log.html" target="_self">Update Log</a></li>
+        <li><a href="about_me.html" target="_self">About Me</a></li>
+      </ul>
+      <p>If enjoy visiting my website then please leave a like</p>
+      <!-- HTML -->
+      <button id="like-button">Like</button>
+      <span id="like-count">0</span> likes
+
+      <script>
+  // JavaScript
+  const likeButton = document.getElementById('like-button');
+  const likeCountElement = document.getElementById('like-count');
+
+  // Check if like count data exists in localStorage and set the count accordingly
+  let likeCount = JSON.parse(localStorage.getItem('likeCount')) || 0;
+  likeCountElement.innerText = likeCount;
+
+  // Listen for clicks on the like button and increment the like count
+  likeButton.addEventListener('click', () => {
+    likeCount++;
+    likeCountElement.innerText = likeCount;
+
+    // Store the updated like count in localStorage
+    localStorage.setItem('likeCount', JSON.stringify(likeCount));
+  });
+</script>
+      <img src="Pictures/tfsb_pic.png">
+    </body>
+    <table border="1">
+      <caption>Girls and Boys per Classroom</caption>
+      <tr>
+        <th>Classroom: 1</th>
+        <td>Girls: 15</td>
+        <td>Boys: 16</td>
+      </tr>
+      <tr>
+        <th>Classroom: 2</th>
+        <td>Girls: 13</td>
+        <td>Boys: 18</td>
+      </tr>
+    </table>
+</html>
