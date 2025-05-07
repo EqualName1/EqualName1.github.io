@@ -1,0 +1,140 @@
+
+body {
+    background-image: url(Lounge\ Assets/mainBg.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #000;
+}
+
+@font-face {
+  font-family: 'RastantyCortez';
+  src: url(Loung\ Fonts/rastanty-cortez.ttf);
+}
+
+@keyframes tiltSideToSide {
+  0% {
+    transform: rotate(4deg);
+  }
+  25% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-4deg);
+  }
+  75% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(4deg);
+  }
+}
+
+#titleBox {
+  font-weight: 4000;
+  font-style: italic;
+  font-size: 100px;
+  color: #ffe174	;
+  text-align: center;
+  transform-origin: center center;
+  text-align: left;
+  display: inline-block;
+  margin: 20px;
+}
+
+.titles {
+  font-family: 'RastantyCortez';
+  animation: tiltSideToSide 5s linear infinite;
+  transform-origin: 50% 50%;
+}
+
+#welcomeBox {
+  text-align: left;
+  color: #ffe174;
+  font-size: 50px;
+  margin-left: 30px;
+  margin-top: 30px;
+  display: block;
+  width: 300px;
+  height: 100px;
+}
+
+#navBox {
+  font-size: 20px;
+}
+
+.infoBoxes {
+  position: fixed;
+  background-color: #ffc067;
+  color: rgb(189, 92, 0);
+  padding: 15px 20px;
+  text-align: center;
+  z-index: 1000;
+  border: 5px solid rgb(189, 92, 0);
+  border-radius: 8px;
+}
+
+#navBox {
+  display: flex;
+  margin-left: 18%;
+  margin-right: 18%;
+  bottom: 1%;
+  width: auto;
+  font-size: 30px;
+  max-height: 70px;
+}
+
+#linkBox {
+  display: flex;
+  text-align: center;
+  width: auto;
+  height: 80px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 5px;
+}
+
+.linkBtns {
+  padding: 10px;
+}
+
+.linkBtns:hover {
+  cursor: pointer;
+  color: rgb(131, 65, 2);
+}
+
+#imgBox {
+  width: 80px;
+  height: 80px;
+  display: block;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 35px;
+}
+
+#patCat {
+  width: 70px;
+  height: 70px;
+  border: 2px solid black;
+  border-radius: 5px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+#lemonMsg {
+  position: fixed;
+  margin-left: 50%;
+  bottom: 19%;
+  font-size: 15px;
+  color: yellow;
+  animation: yellowBlackBlink 1s infinite;
+}
+
+@keyframes yellowBlackBlink {
+  0%, 100% {
+    color: yellow;
+  }
+  50% {
+    color: black;
+  }
+}
